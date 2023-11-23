@@ -38,7 +38,7 @@ def check_answers_Question1(Answer1, Answer2=''):
         if (integrate(Answer1,u) == parsing.sympy_parser.parse_expr('E**u')):
             feedback = f'That is the correct substitution: {Answer1} du, Good Job!'
         else:
-            feedback = f'This is not the correct substitution. Remeber to substitue the u/du with the respected values.'
+            feedback = f'This is not the right substitution. Remeber to substitue the u/du with the respected values.'
         return {'feedback':feedback}
     elif (step == 'step3'):
         Answer = integrate(Answer1,u)
@@ -52,7 +52,7 @@ def check_answers_Question1(Answer1, Answer2=''):
         if (Answer1 == parsing.sympy_parser.parse_expr('E**(x**2)')):
             feedback = f'correct {Answer1} is the final answer.'
         else:
-            feedback = f'This is not the correct answer. remember we replace u/du with what we substituted for u/du in step 1'
+            feedback = f'This is not the right answer. remember we replace u/du with what we substituted for u/du in step 1'
     return {"feedback":feedback}
 
 @api.route('/Question1', methods=['GET', 'POST'])

@@ -1,42 +1,47 @@
 .underline {
     margin: 0px;
     width: 50vw;
-  }
+}
+.underline2{
+    margin: 0px;
+    width: 25vw;
+}
   
-  .resultDiv {
-    align-content: right;
-  }
-  .inputFix {
-    display: flex;
-    align-self: flex-start;
-    width: 5vw;
-  }
-  .buttonFix{
-    width: 7vw;
-  }
-  
-  .Question1{
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
-  }
-  
-  .Question_Feedback{
-    display: flex;
-    flex-direction: row;
-    gap: 10vw;
-    height: 50vh;
-  }
-  .Questions{
-    outline: 1px black solid;
-    flex-direction: column;
-    width: 50vw;
-    padding: 5px;
-  }
-  .Feedback{
-    flex-direction: column;
-    outline: 2px black solid;
-    width: 50vw;
-    padding: 5px;
-  }
+.resultDiv {
+align-content: right;
+}
+.inputFix {
+display: flex;
+align-self: flex-start;
+width: 5vw;
+}
+.buttonFix{
+width: 7vw;
+}
+
+.Question1{
+display: flex;
+flex-direction: column;
+margin: 5px;
+}
+
+.Question_Feedback{
+display: flex;
+flex-direction: row;
+gap: 10vw;
+height: 50vh;
+}
+.Questions{
+outline: 1px black solid;
+flex-direction: column;
+width: 50vw;
+padding: 5px;
+}
+.Feedback{
+flex-direction: column;
+outline: 1px black solid;
+width: 25vw;
+padding: 5px;
+font-size: 10px;
+}
   
