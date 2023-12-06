@@ -60,9 +60,11 @@ def question_One():
     '''
     create all possible u's and du's for problems.
     '''
-    u = parsing.sympy_parser.parse_expr(request.form.get('Answer1').replace('^','**').replace('e','E').replace('* du',"").replace('*du',"").replace(' du',""))
+    
+    print(request.form.get('Answer2'))
+    u = parsing.sympy_parser.parse_expr(request.form.get('Answer1').replace('^','**').replace('e','E').replace('* du',"").replace('*du',"").replace(' du',"").lower())
     if (request.form.get('Answer2')):
-        du = parsing.sympy_parser.parse_expr(request.form.get('Answer2').replace('^','**').replace('e','E'))
+        du = parsing.sympy_parser.parse_expr(request.form.get('Answer2').replace('^','**').replace('e','E').lower())
     else:
         du = ""
     return check_answers_Question1(u, du)
