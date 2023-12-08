@@ -33,6 +33,8 @@ def check_answers_Question1(Answer1, Answer2=''):
             feedback = f" Although {Answer1} is the right substitution for u, {Answer2} is not valid. Hint: Find the differential du/dx, which allows you to express dx in terms of du."
         elif (integrate(Answer1,x) != integrate('x**2',x) and integrate(Answer2,x) == integrate('2*x',x)):
             feedback = f" Although {Answer2} is the right substitution for du, {Answer1} is not valid. Hint:  Make a substitution by letting u be a function of x that simplifies the expression. This choice is often guided by differentials, powers, or trigonometric functions."
+        else:
+            feedback = 'Please read the instructions and try again.'
         return {'feedback': feedback}
     elif (step == 'step2'):
         if (integrate(Answer1,u) == parsing.sympy_parser.parse_expr('E**u')):
@@ -62,7 +64,7 @@ def question_One():
     '''
     
     print(request.form.get('Answer2'))
-    u = parsing.sympy_parser.parse_expr(request.form.get('Answer1').replace('^','**').replace('e','E').replace('* du',"").replace('*du',"").replace(' du',"").lower())
+    u = parsing.sympy_parser.parse_expr(request.form.get('Answer1').replace('^','**').replace('e','E').replace('* du',"").replace('*du',"").replace(' du',"").replace('X','x'))
     if (request.form.get('Answer2')):
         du = parsing.sympy_parser.parse_expr(request.form.get('Answer2').replace('^','**').replace('e','E').lower())
     else:

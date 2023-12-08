@@ -190,38 +190,42 @@ export default function Question1() {
                             <MathJaxContext>
                                 <MathJax> <h3>Step 1:{"\\(\\int 2xe^{x^2} \\, dx\\)"}</h3></MathJax>
                             </MathJaxContext>
+                            <p>Identify u/du</p>
                             <dl>
-                                <dt><li>{feedBackStep1}.</li></dt>
+                                <dt><li>{feedBackStep1.replace('**','^')}</li></dt>
                             </dl>
                         </div>
                     )}
                     {feedBackStep2 && (
                         <div>
                             <MathJaxContext>
-                                <MathJax><h3>Step2: {"\\(\\int 2xe^{x^2} \\, dx\\)"}</h3></MathJax>
+                                <MathJax><h3>Step 2: {"\\(\\int 2xe^{x^2} \\, dx\\)"}</h3></MathJax>
                             </MathJaxContext>
+                            <p>Equation in terms of u/du</p>
                             <dl>
-                                <dt><li>{feedBackStep2}</li></dt>
+                                <dt><li>{feedBackStep2.replace('**','^').replace('exp(u)','e^u')}</li></dt>
                             </dl>
                         </div>
                     )}
                     {feedBackStep3 && (
                         <div>
                             <MathJaxContext>
-                                <MathJax><h3>Step3: {"\\(\\int e^u \\, du\\)"} </h3></MathJax>
+                                <MathJax><h3>Step 3: {"\\(\\int e^u \\, du\\)"} </h3></MathJax>
                             </MathJaxContext>
+                            <p>Integrate</p>
                             <dl>
-                                <dt><li>{feedBackStep3}</li></dt>
+                                <dt><li>{feedBackStep3.replace('**','^').replace('exp(u)','e^u')}</li></dt>
                             </dl>
                         </div>
                     )}
                     {feedBackStep4 && (
                         <div>
                              <MathJaxContext>
-                                    <MathJax><h3>Step4: {"\\(e^u \\)"}</h3></MathJax>
+                                    <MathJax><h3>Step 4: {"\\(e^u \\)"}</h3></MathJax>
                             </MathJaxContext>
+                            <p>re-write</p>
                             <dl>
-                                <dt><li>{feedBackStep4}</li></dt>
+                                <dt><li>{feedBackStep4.replace('**','^').replace('exp(x^2)','e^(x^2)')}</li></dt>
                             </dl>
                         </div>
                     )}
