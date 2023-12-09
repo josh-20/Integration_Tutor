@@ -232,7 +232,7 @@ export default function Question1() {
                     {feedBackStep5 && (
                         <div>
                             <MathJaxContext>
-                                <MathJax><h3>Answer: {"\\(e^{x^2} \\)"}</h3></MathJax>
+                                <MathJax><h3>Answer: {"\\(e^{x^2} \\)  + C"}</h3></MathJax>
                             </MathJaxContext>
                         </div>
                     )}
